@@ -1,0 +1,21 @@
+.sidebar_div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 10px 5px;
+    /* background: #dfa8a8; */
+    /* gap: 150px; */
+    border-radius: 6px;
+
+}
+
+.folder_div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.active_state{
+    background: #CB1A80;
+}

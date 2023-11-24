@@ -1,0 +1,23 @@
+.dash_container{
+    padding: 20px;
+    background: white;
+    color: black;
+    width: 73%;
+    border-radius: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.dash_image{
+    width: 100%;
+}
+
+.dash_heading{
+    width: 60%;
+    margin: 0;
+    line-height: 2.3rem;
+}

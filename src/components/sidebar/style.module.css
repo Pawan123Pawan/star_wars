@@ -1,0 +1,16 @@
+.sideBar{
+    display: flex;
+    /* justify-content: space-between;
+    align-items: center; */
+    padding: 20px;
+    padding-top: 0;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+
+.sideBar::-webkit-scrollbar{
+    display: none;
+}

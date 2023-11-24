@@ -1,0 +1,25 @@
+.table_body{
+    width: 100%;
+}
+.row_table{
+    border-bottom: 2px solid #DEDEDE;
+}
+.row_table>td{
+    padding: 10px 10px;
+}
+
+.table_div{
+    background: transparent;
+}
+
+.table_head>th{
+    background: #4D5875;
+}
+.table_head>th{
+    padding: 10px 10px;
+}
+
+.movie_name_td{
+    display: flex;
+    gap: 10px;
+}

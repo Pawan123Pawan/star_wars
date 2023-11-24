@@ -1,0 +1,13 @@
+.rightBar{
+    display: flex;
+    padding: 20px;
+    padding-top: 0;
+    flex: 5;
+    flex-direction: column;
+    overflow-y: scroll;
+   
+}
+
+.rightBar::-webkit-scrollbar{
+    display: none;
+}

@@ -1,0 +1,7 @@
+.mainContainer{
+    display: flex;
+  /* flex-direction: column; */
+    flex: 1;
+    height: 87vh;
+    margin-top: 15px;
+}
