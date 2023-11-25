@@ -1,21 +1,21 @@
 import styles from "./style.module.css";
 import reel from '../../assets/FilmReel.png'
 import menu from '../../assets/menu.png'
-function ListCard() {
+function ListCard({movieEach}) {
   return (
       <tr className={styles.row_table}>
         <td className={styles.movie_name_td}>
             <img src={reel} alt="reel" />
-            <div>Movie Name</div>
+            <div>{movieEach.title}</div>
         </td>
-        <td>Mark</td>
-        <td>Otto</td>
+        <td>{movieEach.director}</td>
+        <td>{movieEach.release_date}</td>
         <td align="right"><img src={menu} alt="menu" style={{cursor:"pointer"}} /></td>
       </tr>
   );
 }
 
-function ListContainer() {
+function ListContainer({filmdetail}) {
   return (
     <div className={styles.table_div}>
       <table className={` ${styles.table_body}`}>
@@ -27,10 +27,9 @@ function ListContainer() {
           </tr>
         </thead>
         <tbody>
-          <ListCard />
-          <ListCard />
-          <ListCard />
-          <ListCard />
+          {
+            filmdetail.map((movie,index)=><ListCard key={index} movieEach={movie}/>)
+          }
         </tbody>
       </table>
     </div>

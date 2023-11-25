@@ -4,14 +4,15 @@ import movieIcon from "../../assets/FilmReel.png"
 import menu from "../../assets/menu.png"
 import styles from "./style.module.css"
 
-function MovieCard() {
+function MovieCard({movieEach}) {
+  
   return (
     <div className={styles.card}>
         <img src={thumb} alt="thubnell" className={styles.thumb}/>
         <div className={styles.card_description}>
             <div className={styles.description}>
                 <img src={movieIcon} alt="movieIcon" />
-                <div>MoviesName</div>
+                <div>{movieEach.title}</div>
             </div>
             <div className={styles.menu}>
               <img src={menu} alt="menu" />
@@ -21,15 +22,13 @@ function MovieCard() {
   )
 }
 
-function MovieContainer(){
+function MovieContainer({filmdetail}){
   return (
     <div className={styles.container}>
-        <MovieCard/>
-        <MovieCard/>
-        <MovieCard/>
-        <MovieCard/>
-        <MovieCard/>
-        <MovieCard/>
+      {
+        filmdetail.map((movie,index)=><MovieCard key={index} movieEach={movie}/>)
+      }
+        
     </div>
   )    
 }

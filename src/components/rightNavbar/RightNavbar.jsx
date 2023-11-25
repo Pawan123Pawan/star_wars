@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "./style.module.css"
 import CustomGrid from '../gridAndList/CustomGrid'
 import CustomList from '../gridAndList/CustomList'
-function RightNavbar() {
+function RightNavbar({listName ,sendButtonBehaviour,behaviour}) {
+  // const[manageButtonBehaviour,setActiveButtonBehaviour] =useState(true)
   return (
     <div className={styles.rightnavbar}>
-        <div>Films</div>
-        <CustomGrid/>
-        <CustomList/>
+        <div>{listName}</div>
+        {
+          behaviour === "grid"? <CustomGrid handleGridButton={()=>sendButtonBehaviour("list")}/>:<CustomList handleListButton={()=>sendButtonBehaviour("grid")}/>
+        }
+        
+        
     </div>
   )
 }

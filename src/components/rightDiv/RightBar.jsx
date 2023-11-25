@@ -14,7 +14,7 @@ function RightBar({value,listName}) {
   return (
     <div className={styles.rightBar}>
       {
-        value.length>0 ? <ListContainer/> :<DashboardRight/>
+        value.length>0 ? <HandleMovieContainer value={value} listName={listName}/> :<DashboardRight/>
       }
         {/* <HandleMovieContainer value={value} listName={listName}/> */}
         {/* <RightNavbar/> */}
