@@ -1,29 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './style.module.css'
 import DashboardRight from '../dashboard/DashboardRight'
-import RightNavbar from '../rightNavbar/RightNavbar'
-import MovieCard from '../moviesContainer/MovieContainer.jsx'
-import MovieContainer from '../moviesContainer/MovieContainer.jsx'
-import DropFIle from '../Drom-file-menu/DropFIle.jsx'
-import Modal from '../modal/Modal.jsx'
-import ListContainer from '../movie_list_container/ListContainer.jsx'
-import GridView from '../grid_view/GridView.jsx'
-import ListView from '../listView/ListView.jsx'
 import HandleMovieContainer from '../handleMovieContainer/HandleMovieContainer.jsx'
+import MovieDetaileSidebar from '../movies_details_sidebar/MovieDetaileSidebar.jsx'
+import Modal from "../modal/Modal.jsx"
 function RightBar({value,listName}) {
+  const[add,setAdd] =useState(false)
+  const[modal,setModal] = useState(false)
+  function openMovieDetails(data){
+    // console.log("coming image: " + data)
+    setAdd(data)
+  }
+
+  function handleModal(){
+    setModal(true);
+  }
+
+  function checkModal(checker){
+    if(checker){
+      setAdd(true);
+      setModal(false);
+    }  
+    else{
+      setAdd(false);
+      setModal(false);
+    }
+    console.log("dskjdjs");
+  }
+
   return (
     <div className={styles.rightBar}>
       {
-        value.length>0 ? <HandleMovieContainer value={value} listName={listName}/> :<DashboardRight/>
+        value.length>0 ? <HandleMovieContainer value={value} listName={listName} openMovieDetails={openMovieDetails}/> :<DashboardRight/>
       }
-        {/* <HandleMovieContainer value={value} listName={listName}/> */}
-        {/* <RightNavbar/> */}
-        
-        {/* <DropFIle/>
-        <Modal/>
-        <ListContainer/>
-        <GridView/>
-        <ListView/> */}
+     
+        {
+          add? <MovieDetaileSidebar cancelMovieDetails={handleModal}/>:<></>
+        }
+        {
+          modal? <Modal handleModalData={checkModal}/>:<></>
+        }
+        {/* <Modal handleModalData={checkModal}/> */}
     </div>
   )
 }

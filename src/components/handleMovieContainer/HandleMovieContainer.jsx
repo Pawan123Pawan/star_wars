@@ -5,13 +5,13 @@ import ListContainer from '../movie_list_container/ListContainer'
 import ListView from '../listView/ListView'
 import GridView from '../grid_view/GridView'
 
-function HandleMovieContainer({value,listName}) {
+function HandleMovieContainer({value,listName,openMovieDetails}) {
   const[behaviour,setBehaviour] = useState("grid")
   return (
     <div>
       <RightNavbar listName={listName} sendButtonBehaviour={(data)=>setBehaviour(data)} behaviour={behaviour}/>
         {
-          listName==="Films" ? behaviour === "grid" ? <MovieContainer filmdetail={value}/> : <ListContainer filmdetail={value}/>:<></>
+          listName==="Films" ? behaviour === "grid" ? <MovieContainer filmdetail={value} openMovieDetails={openMovieDetails}/> : <ListContainer filmdetail={value}/>:<></>
         }
         {
           listName==="People" ? behaviour === "list"? <ListView data={value} name={listName}/> : <GridView data={value} name={listName}/>:<></>

@@ -12,8 +12,8 @@ function PlanetsCard({item}){
   return(
       <div className={styles.grid_items}>
           <div>Name : {item.name}</div>
-          <div>Climate : {item.birth_year}</div>
-          <div>Gravity : {item.species}</div>
+          <div>Climate : {item.climate}</div>
+          <div>Gravity : {item.gravity}</div>
       </div>
   )
 }
@@ -21,8 +21,8 @@ function SpeciesCard({item}){
   return(
       <div className={styles.grid_items}>
           <div>Name : {item.name}</div>
-          <div>Homeworld : {item.birth_year}</div>
-          <div>Lifespan : {item.species}</div>
+          <div>Homeworld : {item.homeworld}</div>
+          <div>Lifespan : {item.language}</div>
       </div>
   )
 }
@@ -30,8 +30,8 @@ function StarshipsCard({item}){
   return(
       <div className={styles.grid_items}>
           <div>Name : {item.name}</div>
-          <div>Model : {item.birth_year}</div>
-          <div>Hyperdrive Rating : {item.species}</div>
+          <div>Model : {item.model}</div>
+          <div>Hyperdrive Rating : {item.hyperdrive_rating}</div>
       </div>
   )
 }
@@ -39,8 +39,8 @@ function VehiclesCard({item}){
   return(
       <div className={styles.grid_items}>
           <div>Name : {item.name}</div>
-          <div>Model: {item.birth_year}</div>
-          <div>Speed : {item.species}</div>
+          <div>Model: {item.model}</div>
+          <div>Speed : {item.max_atmosphering_speed}</div>
       </div>
   )
 }

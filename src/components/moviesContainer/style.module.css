@@ -1,6 +1,7 @@
 .card{
     /* background: white;
     color: black; */
+    position: relative;
 }
 .container{
     display: grid;

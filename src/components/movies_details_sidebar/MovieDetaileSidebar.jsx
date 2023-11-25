@@ -2,12 +2,12 @@ import styles from "./style.module.css"
 import close from '../../assets/close.png'
 import movie from '../../assets/Rectangle.png'
 
-function MovieDetaileSidebar() {
+function MovieDetaileSidebar({cancelMovieDetails}) {
   return (
     <div className={styles.movie_details_container}>
         <div className={styles.movie_detail_navbar}>
             <div className={styles.movie_details_title}>Movie Details</div>
-            <img src={close} alt="close" style={{cursor:"pointer"}} />
+            <img src={close} alt="close" style={{cursor:"pointer"}} onClick={cancelMovieDetails} />
         </div>
         <div className={styles.movie_all_detail}>
             <div style={{display:"flex",flexDirection:"column", gap:"8px"}}>
