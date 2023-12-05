@@ -4,7 +4,7 @@ function PeopleCard({item}){
       <div className={styles.grid_items}>
           <div>Name : {item.name}</div>
           <div>Date of birth : {item.birth_year}</div>
-          <div>Species : {item.species}</div>
+          <div><p>Species : {item.species}</p></div>
       </div>
   )
 }

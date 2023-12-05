@@ -1,14 +1,14 @@
-.list_container{
+/* Common styles for all screen sizes */
+.list_container {
     width: 100%;
-   display: flex;
-   flex-direction: column;
-   gap: 10px;
-   flex-wrap: wrap;
-   justify-content: space-between;
-
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.list_items{
+.list_items {
     display: flex;
     justify-content: space-between;
     gap: 15px;
@@ -17,4 +17,22 @@
     padding: 10px 10px;
     border-bottom: 2px solid white;
     font-size: 18px;
+}
+.list_items>div{
+    width: 30%;
+    overflow-x: scroll;
+}
+
+.list_items>div::-webkit-scrollbar{
+    display: none ;
+}
+
+/* Media query for screens with a maximum width of 768px  */
+@media only screen and (max-width: 768px) {
+    .list_items {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+    .list_items>div{
+        width: 100%;
+    }
 }

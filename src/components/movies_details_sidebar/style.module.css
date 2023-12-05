@@ -1,6 +1,7 @@
+/* Common styles for all screen sizes */
 .movie_details_container {
   position: absolute;
-  top:  0;
+  top: 0;
   left: 0;
   display: flex;
   height: 100%;
@@ -8,25 +9,35 @@
   gap: 10px;
   background: var(--background);
   color: var(--color);
-  width: 400px;
+  width: 100%; /* Full width on all screen sizes */
+  max-width: 400px; /* Limit to 400px width on larger screens */
   z-index: 1;
 }
 
+/* Media query for screens with a maximum width of 768px (adjust as needed for mobile devices) */
+@media only screen and (max-width: 768px) {
+  .movie_details_container {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+}
+
+/* Movie Details Navbar */
 .movie_detail_navbar {
   display: flex;
-
   padding: 16px 20px;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #fff;
 }
 
+/* Movie Details Title */
 .movie_details_title {
   color: #fff;
   font-size: 20px;
   font-weight: 500;
 }
 
+/* Movie All Details */
 .movie_all_detail {
   display: flex;
   padding: 16px;
@@ -34,19 +45,22 @@
   gap: 8px;
 }
 
+/* Movie Title */
 .movie_title {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
 }
 
+/* Movie Image */
 .movie_image {
   width: 100%;
-  height: 250px;
+  height: auto; /* Adjusted for responsiveness */
   border-radius: 10px;
   border: 1px solid white;
 }
 
+/* Movie Description */
 .movie_des {
   padding: 10px 16px;
   border-radius: 8px;
@@ -57,10 +71,13 @@
   font-weight: 400;
 }
 
+/* Movie Close Div */
 .movie_close_div {
   border-top: 1px solid #fff;
-  padding:10px;
+  padding: 10px;
 }
+
+/* Movie Details Close */
 .movie_details_close {
   display: flex;
   padding: 10px 16px;
@@ -72,4 +89,21 @@
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+}
+
+/* Media query for screens with a maximum width of 600px  */
+@media only screen and (max-width: 600px) {
+  .movie_detail_navbar {
+    padding: 10px 14px; /* Adjusted padding for smaller screens */
+  }
+  
+  .movie_all_detail {
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .movie_title,
+  .movie_des,
+  .movie_details_close {
+    font-size: 14px; /* Adjusted font size for smaller screens */
+  }
 }

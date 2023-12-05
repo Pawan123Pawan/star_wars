@@ -1,13 +1,20 @@
-.rightBar{
+.rightBar {
     display: flex;
     padding: 20px;
     padding-top: 0;
     flex: 5;
     flex-direction: column;
     overflow-y: scroll;
-   /* position: relative; */
 }
 
-.rightBar::-webkit-scrollbar{
+.rightBar::-webkit-scrollbar {
     display: none;
+}
+
+/* Media query for screens with a maximum width of 600px (adjust as needed) */
+@media only screen and (max-width: 600px) {
+    .rightBar {
+        flex: 1; /* Adjust flex value for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
 }

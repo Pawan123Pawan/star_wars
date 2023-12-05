@@ -8,9 +8,33 @@
     flex-direction: column;
     overflow-y: scroll;
     width: 100%;
+    min-width: 300px;
 }
 
 
 .sideBar::-webkit-scrollbar{
     display: none;
 }
+
+.sidebar_child_div{
+    /* min-height: 100px; */
+    overflow-y: scroll;
+}
+.sidebar_child_div::-webkit-scrollbar {
+    width: 2px;
+    /* Set the width of the scrollbar */
+}
+
+.sidebar_child_div::-webkit-scrollbar-thumb {
+    background-color: #888; /* Set the color of the scrollbar thumb */
+    border-radius: 6px; /* Set the border-radius of the scrollbar thumb */
+}
+
+.sidebar_child_div::-webkit-scrollbar-track {
+    background-color:var(--background); /* Set the color of the scrollbar track */
+}
+
+
+
+
+

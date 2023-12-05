@@ -3,7 +3,7 @@
     position: absolute;
     top: 20px;
     right: 50px;
-    z-index: 6;
+    z-index: 1;
     display: flex;
     width: 172px;
     padding: 8px;

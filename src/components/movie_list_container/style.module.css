@@ -1,26 +1,48 @@
-.table_body{
+/* Common styles for all screen sizes */
+.table_body {
     width: 100%;
 }
-.row_table{
+
+.row_table {
     border-bottom: 2px solid #DEDEDE;
     position: relative;
 }
-.row_table>td{
+
+.row_table > td {
     padding: 10px 10px;
 }
 
-.table_div{
+.table_div {
     background: transparent;
 }
 
-.table_head>th{
+.table_head > th {
     background: #4D5875;
-}
-.table_head>th{
     padding: 10px 10px;
 }
 
-.movie_name_td{
+.movie_name_td {
     display: flex;
     gap: 10px;
 }
+
+/* Media query for screens with a maximum width of 768px */
+@media only screen and (max-width: 768px) {
+    .row_table {
+        display: block; 
+        width: 100%;
+    }
+
+    .row_table > td {
+        display: block; 
+        padding: 10px 0;
+
+    }
+
+    .movie_name_td {
+        flex-direction: column; 
+        gap: 5px; 
+    }
+}
+
+

@@ -1,7 +1,17 @@
-.mainContainer{
-    display: flex;
-  /* flex-direction: column; */
-    flex: 1;
-    height: 87vh;
-    margin-top: 15px;
+.mainContainer {
+  display: flex;
+  flex: 1;
+  height: 87vh;
+  margin-top: 15px;
+}
+
+/* Responsive Styles for Main Container */
+
+/* Mobile View */
+@media only screen and (max-width: 600px) {
+  .mainContainer {
+    flex-direction: column;
+    height: auto;
+    margin-top: 10px;
+  }
 }

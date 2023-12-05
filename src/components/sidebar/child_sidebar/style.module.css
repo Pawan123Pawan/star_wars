@@ -1,4 +1,5 @@
-.sidebar_child{
+/* Styles for the sidebar child element */
+.sidebar_child {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,18 +8,32 @@
     background: #4D5875;
     margin: 5px 0;
     border-radius: 6px;
-    overflow: hidden;
-    overflow-x: scroll;
+    overflow: hidden; /* Enable horizontal scrolling for overflowing content */
+    white-space: nowrap; /* Prevent text wrapping */
+    opacity: 0.8;
 }
-.sidebar_child::-webkit-scrollbar{
+
+.sidebar_child:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Hide the scrollbar for WebKit browsers */
+.sidebar_child::-webkit-scrollbar {
     display: none;
 }
 
-.folder_child{
+/* Styles for the folder child element within the sidebar */
+.folder_child {
     display: flex;
     align-items: center;
     gap: 12px;
 }
-.movie_name{
-    text-wrap: nowrap;
+
+/* Styles for the movie name within the sidebar child element */
+.movie_name {
+    text-overflow:ellipsis; /*Display ellipsis for overflowing text*/
+    overflow: hidden; 
+    white-space: nowrap;
 }
+

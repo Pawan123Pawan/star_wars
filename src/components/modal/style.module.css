@@ -1,18 +1,23 @@
+/* Common styles for all screen sizes */
 .modal_div {
   display: flex;
-  width: 400px;
+  width: 100%;
+  max-width: 400px; /* Limit the width on larger screens */
   padding: 24px;
   flex-direction: column;
   border-radius: 12px;
   background: var(--White, #fff);
   position: absolute;
   top: 0;
-  left: 30%;
-  /* Shadow/xl */
+  left: 50%; /* Center the modal horizontally */
+  transform: translateX(-50%);
+  /* Shadow*/
   box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03),
     0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+    z-index: 2;
 }
 
+/* Caution Icon */
 .caution_icon {
   display: flex;
   width: 48px;
@@ -24,6 +29,8 @@
   background: var(--error-100, #fee4e2);
   margin-bottom: 20px;
 }
+
+/* Caution Title */
 .caution_title {
   color: var(--gray-900, #101828);
   font-family: Inter;
@@ -32,6 +39,8 @@
   font-weight: 700;
   line-height: 28px; /* 155.556% */
 }
+
+/* Caution Description */
 .caution_des {
   color: var(--gray-500, #667085);
   font-size: 14px;
@@ -41,6 +50,7 @@
   margin-bottom: 32px;
 }
 
+/* Caution Name */
 .caution_name {
   color: var(--gray-500, #667085);
   font-size: 14px;
@@ -48,33 +58,46 @@
   font-weight: 700;
 }
 
+/* Modal Buttons */
 .modal_btn {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; 
   width: 100%;
   gap: 12px;
 }
 
+/* Caution Button */
 .caution_btn {
   padding: 10px 18px;
   border-radius: 8px;
-  width: 50%;
+  width: 100%; /* Full width on all screen sizes */
   cursor: pointer;
 }
 
+/* Cancel Button */
 .cancel_btn {
   border: 1px solid var(--Grey-Stroke, #dedede);
   background: var(--White, #fff);
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   color: var(--gray-700, #344054);
   font-size: 16px;
+  cursor: pointer;
 }
 
-.yes_btn {
+/* Yes Button */
+.cancel_btn:hover {
   border: 1px solid #fc5a5a;
   background: #fc5a5a;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   color: white;
   font-size: 16px;
 }
+
+/* Media query for screens with a maximum width of 768px (adjust as needed for mobile devices) */
+@media only screen and (max-width: 768px) {
+  .modal_div {
+    max-width: 80%; /* Full width on smaller screens */
+  }
+}
+
+

@@ -1,23 +1,43 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto&display=swap');
 
-
-
-:root{
-  --color : white;
-  --background:#03123D;
+:root {
+  --color: white;
+  --background: #03123D;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   background: var(--background);
   font-family: 'Poppins', sans-serif;
-
 }
-#root{
+
+#root {
   width: 100vw;
   background: var(--background);
   color: var(--color);
   overflow: hidden;
+}
+
+/* Responsive Styles */
+
+/* Mobile View */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px; /* Adjust the font size for smaller screens */
+  }
+}
+
+/* Tablet View */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px; /* Adjust the font size for tablet screens */
+  }
+}
+
+/* Large Screens (Above 1980px) */
+@media only screen and (min-width: 1980px) {
+  body {
+    font-size: 18px; /* Adjust the font size for large screens */
+  }
 }

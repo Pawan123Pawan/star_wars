@@ -14,7 +14,7 @@ function Modal({handleModalData}) {
         </div>
         <div className={styles.modal_btn}>
             <button className={`${styles.caution_btn} ${styles.cancel_btn}`} onClick={()=>handleModalData(true)}>Cancel</button>
-            <button className={`${styles.caution_btn} ${styles.yes_btn}`} onClick={()=>handleModalData(false)}>Yes</button>
+            <button className={`${styles.caution_btn} ${styles.cancel_btn}`} onClick={()=>handleModalData(false)}>Yes</button>
         </div>
     </div>
   )

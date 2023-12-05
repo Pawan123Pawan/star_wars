@@ -1,22 +1,45 @@
-.grid_container{
+/* Common styles for all screen sizes */
+.grid_container {
     width: 100%;
-   display: flex;
-   gap: 10px;
-   flex-wrap: wrap;
-   justify-content: space-between;
-
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.grid_items{
+.grid_items {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 290px;
+    width: 100%; /* Full width on all screen sizes */
     min-height: 250px;
     background: white;
     color: black;
     padding: 20px;
     border-radius: 7px;
     font-size: 24px;
-    box-sizing: border-box;
+}
+
+.grid_items>div{
+    overflow-x: scroll;
+}
+
+.grid_items>div::-webkit-scrollbar{
+    display: none;
+}
+
+/* Media query for screens with a maximum width of 768px  */
+@media only screen and (max-width: 768px) {
+    .grid_items {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+/* Media query for screens with a minimum width of 1200px to 1920px */
+@media only screen and (min-width: 1025px) and (max-width: 1920px) {
+    .grid_items {
+        width: 49%;
+    }
+   
 }

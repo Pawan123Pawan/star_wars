@@ -3,5 +3,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    gap: 15px;
     /* flex: .25; */
+}
+
+
+/* Media query for screens with a maximum width of 768px */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start of the container */
+    }
 }
